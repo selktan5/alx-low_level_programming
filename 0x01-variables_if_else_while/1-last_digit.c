@@ -6,7 +6,6 @@
  *and print the last digit of the number stored in the variable n
  *Return: Always 0 (Success)
  */
-
 int main(void)
 
 {
@@ -43,6 +42,7 @@ int main(void)
 	
 	}
 	
+
 	printf("\n");
 	
 	return (0);
