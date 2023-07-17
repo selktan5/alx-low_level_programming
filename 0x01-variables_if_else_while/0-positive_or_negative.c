@@ -1,22 +1,23 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-/**
- * main - Prints a random number and states whether
- *        it is positive, negative, or zero.
- *
- * Return: Always 0.
-*/
-int main(void)
-{
-	int n;
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	if (n > 0)
-		printf("%d is positive\n", n);
-	else if (n < 0)
-		printf("%d is negative\n", n);
-	else
-		printf("%d is zero\n", n);
-	return (0);
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+int main() {
+srand(time(0));
+int n = rand() % (2 * RAND_MAX) - RAND_MAX;
+
+std::cout << "The number " << n << ": ";
+
+if (n > 0) {
+std::cout << "is positive";
+} else if (n < 0) {
+std::cout << "is negative";
+} else {
+std::cout << "is zero";
+}
+
+std::cout << std::endl;
+
+return 0;
 }
