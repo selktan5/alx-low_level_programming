@@ -1,53 +1,15 @@
-#include <stdio.h>
-#include "main.h"
-/**
-* mul - multiplies two integers
-* @a: first integer
-* @b: second integer
-* Return: addition of a and b
-*/
-int mul(int a, int b)
-{
-	return (a * b);
-}
-
 #include "main.h"
 
 /**
-*print_numbers - print 0123456789
-* owned by Bwave ICT
-*Return: void
-*/
-
-void print_numbers(void)
+* _isdigit - write a function that check for a digit (0 through 9).
+* @c: char to check
+* Return:  0 or 1
+**/
+int _isdigit(int c)
 {
-	char c;
-
-	for (c = '0'; c <= '9'; c++)
-	{
-	_putchar(c);
-	}
-	_putchar('\n');
-}
-
-
-#include "main.h"
-
-/**
-*print_most_numbers - prints
-* owned by Bwave ICT
-*Return: void
-*/
-
-void print_most_numbers(void)
-{
-	char c;
-
-	for (c = '0'; c <= '9'; c++)
-	{
-	if (!(c == '2' || c == '4'))
-	_putchar(c);
-	}
-	_putchar('\n');
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }
 
