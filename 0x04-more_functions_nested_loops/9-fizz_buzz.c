@@ -1,28 +1,32 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * print_diagonal - printing lines diagonal
- * @n: input variable
+ * main - entry point
  *
- * Return: void
+ * Description: prints the numbers 1 - 100 w/
+ * Fizz for multiples of 3, Buzz for multiples of 5,
+ * and FizzBuzz for multiples of both
+ *
+ * Return: always 0
  */
-
-
-void print_diagonal(int n)
+int main(void)
 {
-	int i, j;
+	int i;
 
-	if (n <= 0)
-		_putchar('\n');
-	for (i = 0; i < n; i++)
+	for (i = 1; i <= 100; i++)
 	{
-		for (j = 0; j < i; j++)
-		{
-			_putchar(' ');
-		}
-		_putchar('\\');
-		_putchar('\n');
-	
+		if (i % 15 == 0)
+			printf("FizzBuzz");
+		else if (i % 3 == 0)
+			printf("Fizz");
+		else if (i % 5 == 0)
+			printf("Buzz");
+		else
+			printf("%i", i);
+		if (i < 100)
+			printf(" ");
 	}
-
+	printf("\n");
+	return (0);
 }
